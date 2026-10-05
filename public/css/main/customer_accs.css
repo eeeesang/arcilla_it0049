@@ -1,0 +1,30 @@
+:root {
+    --card-border: 1px solid #f9a8d4;
+}
+
+.customer-node {
+    background: linear-gradient(145deg, #fffafd, #fce7f3);
+    border: var(--card-border);
+    border-radius: 0.5em;
+    padding: 1em;
+    margin-top: 1em;
+    box-shadow: 0 0.25em 0.8em rgba(190, 24, 93, 0.1);
+}
+
+.customer-node:nth-child(even) {
+    background: linear-gradient(145deg, #fff1f7, #fbcfe8);
+}
+
+.customer-node:nth-child(3n) {
+    border-color: #f472b6;
+}
+
+.customer-node h1 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #9d174d;
+}
+
+.customer-node p {
+    font-size: 0.9em;
+}

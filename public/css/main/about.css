@@ -1,0 +1,21 @@
+.description-about {
+    margin: 1em 0;
+    max-width: 1000px;
+    justify-self: center;
+    text-align: center;
+    background: linear-gradient(145deg, #fffafd, #fff1f7, #fce7f3);
+    border: 1px solid #f9a8d4;
+    border-radius: 0.75em;
+    padding: 1.5em;
+    box-shadow: 0 0.25em 0.8em rgba(190, 24, 93, 0.1);
+}
+
+.description-about h1 {
+    text-align: center;
+    font-size: 1.3em;
+    color: #9d174d;
+}
+
+.description-about p {
+    font-size: 0.9em;
+}
