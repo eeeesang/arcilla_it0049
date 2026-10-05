@@ -1,0 +1,12 @@
+CI_ENVIRONMENT = development
+
+app.baseURL = 'http://localhost/webtech_tfa2/public/'
+app.indexPage = ''
+
+database.default.hostname = localhost
+database.default.database = pink_pos_tfa2
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+database.default.DBPrefix =
+database.default.port = 3306

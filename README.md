@@ -1,19 +1,28 @@
-# IT0049 TFA1 Pink POS Foundations
+# IT0049 TFA2 Pink POS Database
 
-This CodeIgniter 4 project implements the four-page POS foundation required by IT0049 TFA1.
+Pink POS is a four-page CodeIgniter 4 application upgraded for IT0049 TFA2. The customer and user listings now come from a MySQL database through CodeIgniter models and Query Builder instead of static PHP arrays.
 
-## Pages
+## Requirements
 
-- `/` - landing dashboard
-- `/about` - application overview
-- `/customers` - five customer records from a static PHP array
-- `/users` - five staff records from a static PHP array
+- PHP 8.2 or later
+- Composer
+- MySQL or MariaDB
+- XAMPP Apache and MySQL
 
-## Local setup with XAMPP
+## Local setup
 
-1. Place the project at `C:\Users\ASUSVIVOBOOK\Desktop\xampp fr\htdocs\webtech_tfa1`.
-2. Open a terminal in the project folder and run `composer install` if the `vendor` folder is not present.
-3. Start Apache from the XAMPP control panel.
-4. Visit `http://localhost/webtech_tfa1/public/`.
+1. Place the project in `C:\Users\ASUSVIVOBOOK\Desktop\xampp fr\htdocs\webtech_tfa2`.
+2. Start Apache and MySQL in XAMPP.
+3. Import `pink_pos_tfa2.sql` in phpMyAdmin, or run `mysql -u root < pink_pos_tfa2.sql`.
+4. Run `composer install` if the `vendor` directory is not present.
+5. Confirm the database values in `.env` match your local MySQL credentials.
+6. Visit `http://localhost/webtech_tfa2/public/`.
 
-No database is required for this activity. Customer and user records are defined as static arrays in their controllers and rendered with `foreach` loops in the views.
+## Routes
+
+- `/` - Pink POS dashboard
+- `/about` - project overview
+- `/customers` - customer records retrieved through `CustomerModel`
+- `/users` - user records retrieved through `UserModel`
+
+The `role` column extends the supplied users schema so the TFA1 User Accounts page retains its original role field while moving all records into the database.
