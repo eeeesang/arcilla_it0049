@@ -28,3 +28,4 @@
 .customer-node p {
     font-size: 0.9em;
 }
+.list-toolbar{margin:1rem 0}.primary-button{display:inline-block;padding:.65rem 1rem;border-radius:.45rem;background:#9d174d;color:#fff;text-decoration:none;font-weight:600}.edit-link{display:inline-block;margin-top:.7rem;color:#9d174d;font-weight:600}.success-message{padding:.8rem 1rem;border:1px solid #f472b6;border-radius:.5rem;background:#fff1f7;color:#831843}
