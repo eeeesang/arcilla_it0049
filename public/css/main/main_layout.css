@@ -75,6 +75,7 @@ nav {
     font-weight: 600;
     color: var(--pink-pale);
 }
+.session-user{display:flex;flex-direction:column;margin-top:.6rem;padding:.75rem;border-top:1px solid rgba(255,255,255,.25);color:#fff}.session-user span{font-size:.75rem;opacity:.85}.logout-form button{padding:.55rem 1rem;border:1px solid rgba(255,255,255,.65);border-radius:.45rem;background:transparent;color:#fff;cursor:pointer}.logout-form button:hover{background:rgba(255,255,255,.14)}
 
 .close-nav {
     position: absolute;

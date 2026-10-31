@@ -17,8 +17,14 @@
         <div class="links-nav">
             <a href="<?= site_url('/') ?>">Home</a>
             <a href="<?= site_url('about') ?>">About</a>
-            <a href="<?= site_url('customers') ?>">Customers</a>
-            <a href="<?= site_url('users') ?>">Users</a>
+            <?php if (session('logged_in')): ?>
+                <a href="<?= site_url('customers') ?>">Customers</a>
+                <a href="<?= site_url('users') ?>">Users</a>
+                <div class="session-user"><strong><?= esc(session('full_name')) ?></strong><span><?= esc(session('role')) ?></span></div>
+                <form action="<?= site_url('logout') ?>" method="post" class="logout-form"><?= csrf_field() ?><button type="submit">Logout</button></form>
+            <?php else: ?>
+                <a href="<?= site_url('login') ?>">Staff Login</a>
+            <?php endif; ?>
         </div>
     </nav>
     <div class="ui-backdrop" id='ui-backdrop-nav'></div>
@@ -34,7 +40,7 @@
             <div class="socs-footer">
                 <div class="socs-link-footer">
                     <p>Activity:</p>
-                    <p>IT0049 TFA1</p>
+                    <p>IT0049 TFA4</p>
                 </div>
                 <div class="socs-link-footer">
                     <p>Framework:</p>

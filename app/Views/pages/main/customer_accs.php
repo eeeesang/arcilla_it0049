@@ -13,7 +13,9 @@
             <button id='open-nav'>≡≡</button>
         </div>
     </div>
-    
+
+    <div class="list-toolbar"><a class="primary-button" href="<?= site_url('customers/new') ?>">+ New customer</a></div>
+    <?php if (session('success')): ?><div class="success-message"><?= esc(session('success')) ?></div><?php endif; ?>
     
     <div class="account-list">
     <?php foreach ($customers as $customer): ?>
@@ -21,6 +23,7 @@
             <h1><?= esc($customer['full_name']) ?></h1>
             <p><strong>Email:</strong> <?= esc($customer['email']) ?></p>
             <p><strong>Phone:</strong> <?= esc($customer['phone']) ?></p>
+            <a class="edit-link" href="<?= site_url('customers/' . $customer['id'] . '/edit') ?>">Edit customer</a>
         </div>
     <?php endforeach; ?>
     </div>
